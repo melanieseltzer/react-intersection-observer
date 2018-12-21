@@ -15,7 +15,7 @@ const Main = styled.main`
   display: grid;
   grid-template-columns: 180px 1fr;
   height: 450px;
-  margin: 0 auto;
+  margin: 100px auto;
   max-width: 960px;
   overflow: scroll;
 `;
