@@ -11,6 +11,10 @@ The possibilities are quite endless, for example:
 - Infinite scrolling
 - Sticky nav after scrolling
 
+## Live Preview
+
+https://react-intersection-observer.netlify.com/
+
 ## Local development
 
 Fork the repo and clone to your machine, then run:
