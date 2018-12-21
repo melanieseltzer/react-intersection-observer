@@ -1,19 +1,36 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { pageSections } from '../../helpers';
 
-export default () => (
-  <Nav>
-    <List>
-      {pageSections.map(item => (
-        <ListItem key={item.id}>
-          <Link href={`#${item.id}`}>{item.title}</Link>
-        </ListItem>
-      ))}
-    </List>
-  </Nav>
-);
+const NavItems = props => {
+  const { active } = props;
+  return (
+    <Nav>
+      <List>
+        {pageSections.map(item => (
+          <ListItem key={item.id}>
+            {/* Pass props `active` and `itemId` so styled component has access */}
+            <Link active={active} itemId={item.id} href={`#${item.id}`}>
+              {item.title}
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+    </Nav>
+  );
+};
+
+NavItems.defaultProps = {
+  active: ''
+};
+
+NavItems.propTypes = {
+  active: PropTypes.string
+};
+
+export default NavItems;
 
 const Nav = styled.nav`
   background: #fff;
@@ -40,7 +57,8 @@ const ListItem = styled.li`
 const Link = styled.a`
   color: tomato;
   text-decoration: none;
-  &.active {
-    border-bottom: 2px solid tomato;
-  }
+  /* Check if the active page section is the same as the current link, 
+  if so then underline it as active */
+  border-bottom: ${props =>
+    props.active === props.itemId ? '2px solid tomato' : ''};
 `;
