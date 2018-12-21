@@ -16,7 +16,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "npm run prettier",
+      "yarn prettier",
       "eslint --ignore-path .eslintignore",
       "git add"
     ]
