@@ -1,7 +1,7 @@
 {
   "name": "react-intersection-observer",
   "version": "1.0.0",
-  "description": "React components using the Intersection Observer API",
+  "description": "Playing with the Intersection Observer API using React components",
   "scripts": {
     "start": "parcel public/index.html --open",
     "build": "parcel build public/index.html",
@@ -9,6 +9,7 @@
     "prettier": "prettier --write"
   },
   "author": "Melanie Seltzer <melleh11@gmail.com>",
+  "repository": "github:melanieseltzer/react-intersection-observer",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

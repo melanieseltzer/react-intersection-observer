@@ -5,7 +5,7 @@ import NavItems from '../NavItems';
 import PageContent from '../PageContent';
 import { pageSections } from '../../helpers';
 
-class HighlightNav extends Component {
+class HighlightedNav extends Component {
   constructor(props) {
     super(props);
 
@@ -49,7 +49,7 @@ class HighlightNav extends Component {
   }
 }
 
-export default HighlightNav;
+export default HighlightedNav;
 
 const Main = styled.div`
   display: grid;

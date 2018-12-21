@@ -1,11 +1,11 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import HighlightNav from '../HighlightNav';
+import HighlightedNav from '../HighlightedNav';
 
 export default () => (
   <>
     <GlobalStyle />
-    <HighlightNav />
+    <HighlightedNav />
   </>
 );
 

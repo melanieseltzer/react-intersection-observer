@@ -1,10 +1,12 @@
 # React Intersection Observer
 
-React components that make use of the very useful [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). Intersection Observer allows a callback to be called whenever an element 'intersects' either the device viewport or a specified element.
+Playing with the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) using React. For this particular component we're using Intersection Observer to highlight the nav item when the corresponding page section is in view 👌
+
+Intersection Observer is a very useful API which allows a callback to be called whenever an element 'intersects' either the device viewport or a specified element.
 
 The possibilities are quite endless, for example:
 
-- Navigation changes reflected when scrolling down through different sections of the page
+- Navigation changes reflected when viewing specific content
 - Lazy loading images
 - Infinite scrolling
 - Sticky nav after scrolling
