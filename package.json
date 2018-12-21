@@ -1,0 +1,44 @@
+{
+  "name": "react-intersection-observer",
+  "version": "1.0.0",
+  "description": "React components using the Intersection Observer API",
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "build": "parcel build public/index.html",
+    "lint": "eslint 'src/**/*.js'",
+    "prettier": "prettier --write"
+  },
+  "author": "Melanie Seltzer <melleh11@gmail.com>",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run prettier",
+      "eslint --ignore-path .eslintignore",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "parcel-bundler": "^1.10.3",
+    "prettier": "^1.15.3"
+  }
+}
