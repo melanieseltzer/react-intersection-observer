@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import intersect from '../Intersect';
-import { navItems, lorem } from '../../helpers';
+import { pageSections, lorem } from '../../helpers';
 
 function createMarkup() {
   return { __html: lorem };
@@ -10,7 +10,8 @@ function createMarkup() {
 
 export default class PageContent extends Component {
   componentDidMount() {
-    navItems.forEach(item => {
+    // Set observer on each page section
+    pageSections.forEach(item => {
       intersect(item);
     });
   }
@@ -18,7 +19,7 @@ export default class PageContent extends Component {
   render() {
     return (
       <main>
-        {navItems.map(item => (
+        {pageSections.map(item => (
           <Section className={item.id} key={item.id} id={item.id}>
             <h2>{item.title}</h2>
             <div dangerouslySetInnerHTML={createMarkup()} />

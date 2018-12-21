@@ -1,16 +1,17 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import NavWrapper from '../NavWrapper';
+import HighlightNav from '../HighlightNav';
 
 export default () => (
   <>
     <GlobalStyle />
-    <NavWrapper />
+    <HighlightNav />
   </>
 );
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: #F0F3F7;
+    background: #fff;
+    margin: 0;
   }
 `;

@@ -17,7 +17,7 @@ const Main = styled.div`
   height: 550px;
   margin: 0 auto;
   max-width: 960px;
-  overflow: scroll;
+  overflow: auto;
   @media (min-width: 768px) {
     grid-template-columns: 180px 1fr;
     margin: 40px auto;

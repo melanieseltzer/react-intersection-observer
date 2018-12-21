@@ -1,5 +1,5 @@
 // Nav Items
-export const navItems = [
+export const pageSections = [
   {
     id: 'one',
     title: 'Section One'

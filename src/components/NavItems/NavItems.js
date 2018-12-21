@@ -1,31 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { navItems } from '../../helpers';
+import { pageSections } from '../../helpers';
 
 export default () => (
-  <Aside>
-    <Nav>
-      <ul>
-        {navItems.map(item => (
-          <ListItem key={item.id}>
-            <Link href={`#${item.id}`}>{item.title}</Link>
-          </ListItem>
-        ))}
-      </ul>
-    </Nav>
-  </Aside>
+  <Nav>
+    <List>
+      {pageSections.map(item => (
+        <ListItem key={item.id}>
+          <Link href={`#${item.id}`}>{item.title}</Link>
+        </ListItem>
+      ))}
+    </List>
+  </Nav>
 );
 
-const Aside = styled.aside`
-  @media (max-width: 768px) {
+const Nav = styled.nav`
+  background: #fff;
+  @media (max-width: 767px) {
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #000;
     margin-bottom: 20px;
   }
 `;
 
-const Nav = styled.nav`
-  position: sticky;
-  top: 20px;
+const List = styled.ul`
+  margin: 0;
+  @media (min-width: 768px) {
+    position: sticky;
+    top: 0;
+  }
 `;
 
 const ListItem = styled.li`
