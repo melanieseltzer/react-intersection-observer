@@ -11,11 +11,15 @@ export default () => (
   </Main>
 );
 
-const Main = styled.main`
+const Main = styled.div`
   display: grid;
-  grid-template-columns: 180px 1fr;
-  height: 450px;
-  margin: 100px auto;
+  grid-template-rows: auto;
+  height: 550px;
+  margin: 0 auto;
   max-width: 960px;
   overflow: scroll;
+  @media (min-width: 768px) {
+    grid-template-columns: 180px 1fr;
+    margin: 40px auto;
+  }
 `;

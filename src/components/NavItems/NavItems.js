@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { navItems } from '../../helpers';
 
 export default () => (
-  <aside>
+  <Aside>
     <Nav>
       <ul>
         {navItems.map(item => (
@@ -14,8 +14,14 @@ export default () => (
         ))}
       </ul>
     </Nav>
-  </aside>
+  </Aside>
 );
+
+const Aside = styled.aside`
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+`;
 
 const Nav = styled.nav`
   position: sticky;

@@ -17,19 +17,19 @@ export default class PageContent extends Component {
 
   render() {
     return (
-      <section>
+      <main>
         {navItems.map(item => (
-          <Observe className={item.id} key={item.id}>
+          <Section className={item.id} key={item.id} id={item.id}>
             <h2>{item.title}</h2>
             <div dangerouslySetInnerHTML={createMarkup()} />
-          </Observe>
+          </Section>
         ))}
-      </section>
+      </main>
     );
   }
 }
 
-const Observe = styled.div`
+const Section = styled.section`
   border: 2px dashed #000;
   margin-bottom: 20px;
   padding: 20px;
