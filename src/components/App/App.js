@@ -1,6 +1,16 @@
 import React from 'react';
+import { createGlobalStyle } from 'styled-components';
 import NavWrapper from '../NavWrapper';
 
-const App = () => <NavWrapper />;
+export default () => (
+  <>
+    <GlobalStyle />
+    <NavWrapper />
+  </>
+);
 
-export default App;
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: #F0F3F7;
+  }
+`;
