@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import intersect from '../Intersect';
 import { navItems, lorem } from '../../helpers';
 
 function createMarkup() {
@@ -10,19 +11,7 @@ function createMarkup() {
 export default class PageContent extends Component {
   componentDidMount() {
     navItems.forEach(item => {
-      const elem = document.querySelector(`.${item.id}`);
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.intersectionRatio > 0) {
-            console.log(`section ${item.id} is in the view`);
-          } else {
-            console.log(`section ${item.id} is out of view`);
-          }
-        });
-      });
-
-      observer.observe(elem);
+      intersect(item);
     });
   }
 
