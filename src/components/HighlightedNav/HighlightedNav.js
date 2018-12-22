@@ -1,3 +1,5 @@
+// Polyfill for Safari/IE
+import 'intersection-observer';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
