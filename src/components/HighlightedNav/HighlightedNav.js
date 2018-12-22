@@ -6,13 +6,9 @@ import PageContent from '../PageContent';
 import { pageSections } from '../../helpers';
 
 class HighlightedNav extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      active: ''
-    };
-  }
+  state = {
+    active: ''
+  };
 
   componentDidMount() {
     const options = {
